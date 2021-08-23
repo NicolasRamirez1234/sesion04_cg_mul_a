@@ -1,0 +1,61 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background: #ddd;
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+}
+.caja {
+  margin: 150px 20px;
+  width: 170px;
+  height: 150px;
+  background: crimson;
+  color: #ffg;
+  font-size: 40px;
+  text-align: center;
+  line-height: 150px;
+  transition: all 2s; /*añade transiciones a los cambios*/
+}
+.caja:nth-child(1) /*Los cambios se le aplican a la primera caja*/{
+  background: blue;
+  transform: translateX(12px);
+}
+.caja:nth-child(1):hover /*Los se acplian al pasar el cursor por la caja*/{
+}
+.caja:nth-child(2) {
+  background: grey;
+  transform: rotate(150deg);
+}
+.caja:nth-child(2):hover {
+}
+.caja:nth-child(3) {
+  background: yellow;
+  
+}
+.caja:nth-child(3):hover {
+  transform: scaleX(2);
+  transform: scaleY(2);
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
