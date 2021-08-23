@@ -1,0 +1,79 @@
+/* a minimalist set of CSS resets */
+
+/* default to border-box */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* adjust typography defaults */
+body {
+  margin: 1rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background: #ddd;
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+}
+.caja {
+  margin: 150px 20px;
+  width: 170px;
+  height: 150px;
+  color: #ffg;
+  font-size: 40px;
+  text-align: center;
+  line-height: 150px;
+  transition: all 2s; /*añade transiciones a los cambios*/
+}
+.caja:nth-child(1) /*Los cambios se le aplican a la primera caja*/ {
+  width: 250px;
+  height: 30px;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 100px solid blue;
+}
+.caja:nth-child(1):hover /*Los se aplican al pasar el cursor por la caja*/ {
+  transform: translateY(100px);
+}
+.caja:nth-child(2) {
+  width: 0;
+  height: 0;
+  border-left: 100px solid yellow;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+}
+.caja:nth-child(2):hover {
+  transform: scaleX(4);
+}
+.caja:nth-child(3) {
+  background: grey;
+}
+.caja:nth-child(3):hover {
+  transform: scaleX(2);
+  transform: scaleY(2);
+  transform: rotateX(120deg);
+}
+.caja:nth-child(4) {
+  width: 300;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: green;
+}
+.caja:nth-child(4):hover {
+  transform: rotateX(30deg);
+  transform: scaleX(-3);
+}
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
